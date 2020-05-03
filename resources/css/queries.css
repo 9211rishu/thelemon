@@ -101,6 +101,49 @@
   .main-nav {
     display: none;
   }
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+  nav .main-nav {
+    padding-top: 10px;
+  }
+  .main-nav {
+    float: left;
+  }
+  .main-nav li {
+    display: block;
+  }
+  .main-nav li a,
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 5px 0;
+    font-size: 110%;
+  }
+  .sticky .main-nav li a,
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    color: #555;
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .sticky nav .logo-box,
+  .sticky nav .main-nav {
+    padding-top: 0;
+  }
+  .sticky .main-nav li {
+    padding-top: 8px;
+  }
+  .sticky .logo {
+    display: none;
+  }
+  .sticky .logo-black {
+    display: block;
+  }
+  .sticky .mobile-nav-icon i {
+    color: #555;
+  }
   .works-step div {
     font-size: 110%;
     margin-top: 1%;

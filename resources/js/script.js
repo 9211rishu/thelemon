@@ -86,4 +86,33 @@ $(document).ready(function () {
       offset: "50%",
     }
   );
+
+  //Mobile Nav
+  $(".js--nav-icon").click(function () {
+    var nav = $(".js--main-nav");
+    var icon = $(".js--nav-icon i");
+
+    nav.slideToggle(200);
+
+    if (icon.hasClass("fa-align-right")) {
+      icon.addClass("fa-times");
+      icon.removeClass("fa-align-right");
+    } else {
+      icon.addClass("fa-align-right");
+      icon.removeClass("fa-times");
+    }
+
+    // var icon = $('.')
+    // <ion-icon name="close-outline"></ion-icon>
+    // console.log(document.getElementsByClassName("mob-nav")[0])
+    // var classes = document.getElementsByClassName("mob-nav")[0];
+    // if(classes.innerHTML == '<ion-icon class="mob-nav" name="menu-outline"></ion-icon>'){
+    //   console.log("true");
+    //   classes.innerHTML="";
+    //   classes.innerHTML='<ion-icon name="close-outline"></ion-icon>';
+    // }else{
+    //   classes.innerHTML="";
+    //   classes.innerHTML='<ion-icon class="mob-nav" name="menu-outline"></ion-icon>';
+    // }
+  });
 });
