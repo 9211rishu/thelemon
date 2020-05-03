@@ -121,7 +121,7 @@ header {
   background-position: center;
   background-size: cover;
 }
-header .heading-box {
+.heading-box {
   position: absolute;
   top: 50%;
   left: 50%;
