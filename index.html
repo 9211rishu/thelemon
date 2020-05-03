@@ -15,28 +15,35 @@
     <title>The Lemon</title>
   </head>
   <body>
-    <header>
-      <nav class="row">
-        <div class="logo-box">
-          <img src="/resources/img/logo-white.png" alt="logo" class="logo" />
-        </div>
-        <ul class="main-nav">
-          <li><a href="#">Lemon Delivery</a></li>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">Our Cities</a></li>
-          <li><a href="#">Sign Up</a></li>
-        </ul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv" class="">
+        <nav class="row">
+          <div class="logo-box">
+            <a href="#header"
+              ><img src="/resources/img/logo-white.png" alt="logo" class="logo"
+            /></a>
+            <a href="#header"
+              ><img src="/resources/img/logo.png" alt="logo" class="logo-black"
+            /></a>
+          </div>
+          <ul class="main-nav">
+            <li><a href="#features">Lemon Delivery</a></li>
+            <li><a href="#works">How It Works</a></li>
+            <li><a href="#cities">Our Cities</a></li>
+            <li><a href="#plans">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="heading-box row">
         <h1>
           Goodbye lemonade. <br />
           Hello super healthy lemons.
         </h1>
-        <a href="#" class="btn btn-full">Lemons!</a>
-        <a href="#" class="btn">Show me more</a>
+        <a href="#plans" class="btn btn-full js--scroll-to-plan">Lemons!</a>
+        <a href="#features" class="btn js--scroll-to-start">Show me more</a>
       </div>
     </header>
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
       <div class="row">
         <h2>Get Lemons &mdash; Not Lemonade</h2>
         <p class="long-copy">
@@ -45,7 +52,7 @@
           take care of that, we’re really good at it, we promise!
         </p>
       </div>
-      <div class="row">
+      <div class="row js--wp-1">
         <div class="col span-1-of-4">
           <ion-icon name="infinite-outline" class="icon-big"></ion-icon>
           <h3>Up to 365 days/year</h3>
@@ -130,7 +137,7 @@
         </li>
       </ul>
     </section>
-    <section class="section-works">
+    <section class="section-works" id="works">
       <div class="row">
         <h2>How it works - Simple as 1, 2, 3</h2>
       </div>
@@ -140,6 +147,7 @@
             <img
               src="/resources/img/app-iPhone.png"
               alt="The Lemon App iPhone"
+              class="app-screen-img js--wp-2"
             />
           </div>
         </div>
@@ -177,11 +185,11 @@
         </div>
       </div>
     </section>
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
-      <div class="row">
+      <div class="row js--wp-3">
         <div class="col span-1-of-4 box">
           <img src="/resources/img/lisbon-3.jpg" alt="lisbon" />
           <h3>Lisbon</h3>
@@ -288,11 +296,11 @@
         </div>
       </div>
     </section>
-    <section class="section-sign-up">
+    <section class="section-sign-up js--section-plans" id="plans">
       <div class="row">
         <h2>Start getting organic today</h2>
       </div>
-      <div class="row">
+      <div class="row js--wp-4">
         <div class="col span-1-of-3">
           <div class="plan-box">
             <div class="plan-details">

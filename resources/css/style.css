@@ -80,6 +80,7 @@ a:visited {
   border: 1px solid #f1c40f;
   border-radius: 50px;
   color: #f1c40f;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .btn:hover {
@@ -90,6 +91,7 @@ a:visited {
 .btn-full {
   background-color: #f1c40f;
   color: #eee;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .btn-full:hover {
@@ -116,6 +118,8 @@ a:visited {
 /*-------------------------------------------------------------------*/
 header {
   height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
+    url("img/hero.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("img/hero.jpg");
   background-position: center;
@@ -125,7 +129,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 nav .logo-box,
 nav .main-nav {
@@ -136,6 +141,13 @@ nav .main-nav {
   height: 75px;
   float: left;
 }
+.logo-black {
+  display: none;
+  width: auto;
+  height: 60px;
+  float: left;
+  padding: 10px 0 7px 0;
+}
 .main-nav {
   float: right;
 }
@@ -143,11 +155,14 @@ nav .main-nav {
   list-style: none;
   display: inline-block;
 }
-.main-nav li a {
+.main-nav li a,
+.main-nav li a:link,
+.main-nav li a:visited {
   color: #eee;
   margin-left: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid transparent;
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   word-spacing: 3px;
   letter-spacing: 0;
@@ -156,6 +171,36 @@ nav .main-nav {
 .main-nav li a:hover {
   border-bottom: 2px solid #f1c40f;
 }
+/* Sticky Nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 999;
+}
+.sticky .main-nav li a,
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+  padding-bottom: 15px;
+}
+.sticky nav .logo-box,
+.sticky nav .main-nav {
+  padding-top: 0;
+}
+.sticky .main-nav li {
+  padding-top: 15px;
+}
+.sticky .logo {
+  display: none;
+}
+.sticky .logo-black {
+  display: block;
+}
+
 /*-------------------------------------------------------------------*/
 /* FEATURES */
 /*-------------------------------------------------------------------*/
@@ -198,12 +243,15 @@ nav .main-nav {
   opacity: 0.7;
   width: 100%;
   height: auto;
-  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .lemons-photo img:hover {
   opacity: 1;
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*-------------------------------------------------------------------*/
 /* HOW IT WORKS */
@@ -274,6 +322,7 @@ nav .main-nav {
   font-weight: 400;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .box div p a:hover {
@@ -283,6 +332,8 @@ nav .main-nav {
 /* TESTIMONIALS */
 /*-------------------------------------------------------------------*/
 .section-testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),
+    url("img/back-customers.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("img/back-customers.jpg");
   background-position: center;
@@ -439,6 +490,7 @@ footer {
 .fb,
 .twitter,
 .insta {
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .fb:hover {
@@ -454,4 +506,22 @@ footer p {
   text-align: center;
   color: #888;
   margin-top: 20px;
+}
+
+/* Animation */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+  opacity: 1;
 }
